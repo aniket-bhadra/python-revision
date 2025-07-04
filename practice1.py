@@ -205,3 +205,36 @@ obj = Test()
 
 # arr=[25,26,78,25]
 # print(len(arr)-1)
+
+# binary search
+# def search(array,target):
+#    s=0;
+#    e=len(array)-1
+#    while(s<=e):
+#       m= ((e-s)//2)+s
+#       if(target == array[m]):
+#          return m;
+#       if(target>array[m]):
+#          s=m+1;
+#       if(target<array[m]):
+#          e=m-1;
+#    return -1
+
+
+
+# recursive binary search
+def search(array,target, s=0,e=False):
+   if(e==False):
+      e= len(array)-1
+   if(s>e):
+      return -1
+   m=((e-s)//2)+s
+   if(target == array[m]):
+      return m
+   if(target>array[m]):
+      return search(array,target,m+1,e);
+   if(target<array[m]):
+      return search(array,target,s,m+1);
+
+
+print(search([10,22,28,65,88,99,102],65))
