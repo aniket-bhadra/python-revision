@@ -223,18 +223,20 @@ obj = Test()
 
 
 # recursive binary search
-def search(array,target, s=0,e=False):
-   if(e==False):
-      e= len(array)-1
-   if(s>e):
-      return -1
-   m=((e-s)//2)+s
-   if(target == array[m]):
-      return m
-   if(target>array[m]):
-      return search(array,target,m+1,e);
-   if(target<array[m]):
-      return search(array,target,s,m+1);
+# def search(array,target, s=0,e=False):
+#    if(e==False):
+#       e= len(array)-1
+#    if(s>e):
+#       return -1
+#    m=((e-s)//2)+s
+#    if(target == array[m]):
+#       return m
+#    if(target>array[m]):
+#       return search(array,target,m+1,e);
+#    if(target<array[m]):
+#       return search(array,target,s,m+1);
 
 
-print(search([10,22,28,65,88,99,102],65))
+# print(search([10,22,28,65,88,99,102],65)) 
+
+
